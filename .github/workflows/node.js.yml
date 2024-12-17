@@ -37,4 +37,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         
     - name: Deploy to S3
-      run: aws s3 sync dist/ s3://finaceiro-tech-angular-s3
+      run: aws s3 sync dist/ s3://${{secrets.AWS_BUCKET_NAME}}
+    - name: Invalidate Cache CDN
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.CDN_ID }} --paths "/*"

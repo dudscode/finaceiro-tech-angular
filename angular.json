@@ -24,7 +24,7 @@
 				"build": {
 					"builder": "ngx-build-plus:browser",
 					"options": {
-						"outputPath": "dist/financeiro-tech-angular",
+						"outputPath": "dist/build",
 						"index": "src/index.html",
 						"polyfills": [
 							"zone.js"
@@ -60,7 +60,7 @@
 									"maximumError": "4kB"
 								}
 							],
-							"outputHashing": "all",
+							"outputHashing": "none",
 							"extraWebpackConfig": "webpack.prod.config.js"
 						},
 						"development": {

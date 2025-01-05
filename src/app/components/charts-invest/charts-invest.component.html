@@ -1,0 +1,17 @@
+
+<div id="chart">
+    <div *ngIf="showChart">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [labels]="chartOptions.labels"
+          [responsive]="chartOptions.responsive"
+          [legend]="chartOptions.legend"
+          [fill]="chartOptions.fill"
+          [stroke]="chartOptions.stroke"
+          [dataLabels]="chartOptions.dataLabels"
+          [colors]="chartOptions.colors"
+        ></apx-chart>
+
+    </div>
+</div>

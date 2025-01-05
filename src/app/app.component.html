@@ -1,1 +1,5 @@
-<h1>EU SOU O COMPONENT ANGULAR AAAA</h1>
+<main>
+    
+    <app-charts-invest *ngIf="dadosGrafico" [seriesOption]="dadosGrafico"></app-charts-invest>
+    <h3 *ngIf="!dadosGrafico">Erro ao Carregar grafico, tente novamente mais tarde!</h3>
+</main>
